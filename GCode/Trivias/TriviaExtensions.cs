@@ -1,6 +1,6 @@
-﻿using Svg2Gcode.GCode;
+﻿using Dalby.GCode.Tokens;
 
-namespace GCode.Trivias
+namespace Dalby.GCode.Trivias
 {
     public static class TriviaExtensions
     {

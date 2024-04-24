@@ -1,4 +1,4 @@
-﻿namespace GCode.Trivias
+﻿namespace Dalby.GCode.Trivias
 {
     public record WhitespaceTrivia(int Length) : TriviaSyntax(new string(' ', Length));
 }

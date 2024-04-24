@@ -1,8 +1,7 @@
-﻿using Dalby.GCode.Trivias;
-using GCode.Statements;
-using GCode.Trivias;
-using Svg2Gcode.GCode;
-using System.Text;
+﻿using Dalby.Common.Extensions;
+using Dalby.GCode.Statements;
+using Dalby.GCode.Tokens;
+using Dalby.GCode.Trivias;
 
 namespace Dalby.GCode
 {
@@ -106,36 +105,6 @@ namespace Dalby.GCode
             }
 
             return trivia.Count == 0 ? null : ([.. trivia]);
-        }
-    }
-
-    public static class Extensions
-    {
-        public static string ToFullText(this IEnumerable<StatementSyntax> statements) => string.Join(null, statements.Select(statement => statement.FullText));
-        public static IEnumerable<T> Join<T>(this IEnumerable<T> self, T fill)
-        {
-            if (!self.Any()) yield break;
-            yield return self.First();
-            foreach (T t in self.Skip(1))
-            {
-                yield return fill;
-                yield return t;
-            }
-        }
-        public static IEnumerable<T[]> Split<T>(this IEnumerable<T> self, Predicate<T> split)
-        {
-            if (!self.Any()) yield break;
-            List<T> items = [];
-            foreach (T item in self)
-            {
-                if (split(item))
-                {
-                    yield return items.ToArray();
-                    items.Clear();
-                }
-                else items.Add(item);
-            }
-            yield return items.ToArray();
         }
     }
 }

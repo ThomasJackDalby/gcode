@@ -1,8 +1,7 @@
-﻿using Dalby.GCode.Trivias;
-using GCode.Trivias;
-using Svg2Gcode.GCode;
+﻿using Dalby.GCode.Tokens;
+using Dalby.GCode.Trivias;
 
-namespace GCode.Statements
+namespace Dalby.GCode.Statements
 {
     public abstract record StatementSyntax(Token[] Tokens)
     {
@@ -42,8 +41,8 @@ namespace GCode.Statements
                 foreach (Token token in statement.Tokens)
                 {
                     writer.WriteLine($"  - {formatToken(token)} [{token.Text}]");
-                    if (token.LeadingTrivia is not null) writer.WriteLine($"    - L: {String.Join(" | ", token.LeadingTrivia.Select(formatTrivia))}");
-                    if (token.TrailingTrivia is not null) writer.WriteLine($"    - T: {String.Join(" | ", token.TrailingTrivia.Select(formatTrivia))}");
+                    if (token.LeadingTrivia is not null) writer.WriteLine($"    - L: {string.Join(" | ", token.LeadingTrivia.Select(formatTrivia))}");
+                    if (token.TrailingTrivia is not null) writer.WriteLine($"    - T: {string.Join(" | ", token.TrailingTrivia.Select(formatTrivia))}");
                 }
             }
             writer.Flush();

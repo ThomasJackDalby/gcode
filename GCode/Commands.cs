@@ -1,6 +1,6 @@
-﻿using GCode.Statements;
-using GCode.Trivias;
-using Svg2Gcode.GCode;
+﻿using Dalby.GCode.Statements;
+using Dalby.GCode.Tokens;
+using Dalby.GCode.Trivias;
 
 namespace Dalby.GCode
 {

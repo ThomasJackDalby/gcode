@@ -1,6 +1,6 @@
-﻿using GCode.Trivias;
+﻿using Dalby.GCode.Trivias;
 
-namespace Svg2Gcode.GCode
+namespace Dalby.GCode.Tokens
 {
     public record CommandToken(char Key, int Number, TriviaSyntax[]? LeadingTrivia = null, TriviaSyntax[]? TrailingTrivia = null) : Token(LeadingTrivia, TrailingTrivia)
     {

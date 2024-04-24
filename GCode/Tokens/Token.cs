@@ -1,7 +1,6 @@
-﻿using GCode;
-using GCode.Trivias;
+﻿using Dalby.GCode.Trivias;
 
-namespace Svg2Gcode.GCode
+namespace Dalby.GCode.Tokens
 {
     public abstract record Token(TriviaSyntax[]? LeadingTrivia = null, TriviaSyntax[]? TrailingTrivia = null)
     {

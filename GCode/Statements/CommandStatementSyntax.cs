@@ -1,9 +1,8 @@
-﻿using GCode.Trivias;
-using Svg2Gcode.GCode;
-using System.Linq;
-using Utils.Extensions;
+﻿using Dalby.Common.Extensions;
+using Dalby.GCode.Tokens;
+using Dalby.GCode.Trivias;
 
-namespace GCode.Statements
+namespace Dalby.GCode.Statements
 {
     public record CommandStatementSyntax(CommandToken Command, ArgumentToken[]? Arguments = null) : StatementSyntax(Enumerable.Empty<Token>()
         .Concat(Command)

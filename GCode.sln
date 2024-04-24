@@ -5,7 +5,11 @@ VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GCode", "GCode\GCode.csproj", "{AFEE0345-45C6-4E03-84B4-8A3AD43A8AA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCode.Test", "GCode.Test\GCode.Test.csproj", "{0233CBAC-D588-484B-86A2-DBD7151EB060}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GCode.Test", "GCode.Test\GCode.Test.csproj", "{0233CBAC-D588-484B-86A2-DBD7151EB060}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utilities", "Utilities", "{D757977F-8FFC-4B49-A366-B52E86BFC2E8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dalby.Common", "Utilities\Dalby.Common\Dalby.Common.csproj", "{BB198016-A52A-423F-8F00-8470EBB85971}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +25,16 @@ Global
 		{0233CBAC-D588-484B-86A2-DBD7151EB060}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0233CBAC-D588-484B-86A2-DBD7151EB060}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0233CBAC-D588-484B-86A2-DBD7151EB060}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB198016-A52A-423F-8F00-8470EBB85971}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB198016-A52A-423F-8F00-8470EBB85971}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB198016-A52A-423F-8F00-8470EBB85971}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB198016-A52A-423F-8F00-8470EBB85971}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BB198016-A52A-423F-8F00-8470EBB85971} = {D757977F-8FFC-4B49-A366-B52E86BFC2E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {96EF1E75-D307-41A2-8EF5-3AD8DBFFE80B}
