@@ -51,6 +51,14 @@ namespace Dalby.GCode
         public static CommandStatementSyntax G94_UnitsPerMinuteFeedRateMode() => G(94);
         public static CommandStatementSyntax M3_TurnOnSpindle(int speed) => M(3).A('S', 1000);
 
+        // G90
+        // G80
+
+        //  G28, to rapid to the home position.
+        //  G17, to select the x, y circular motion field.
+        //  G20, to select the inch coordinate system. (G21, to select metric)
+        //  G40, to cancel cutter compensation.
+        //  G49, to cancel the cutter height compensation.
 
         public static Builder G(int code) => new('G', code);
         public static Builder M(int code) => new('M', code);
